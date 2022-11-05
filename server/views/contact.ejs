@@ -1,0 +1,97 @@
+<%- include partials/header.ejs %>
+
+
+<%- include partials/main_nav.ejs %>
+
+  
+  <!-- Main Content-->
+  <main class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome To The <%= title %> page</h1>
+      <center>
+    <p>Hi, You can reach out to me directly via my email <br>
+      lijiamei0227@gmail.com</p>
+      <p>You can also fill out this form to contact me</p>
+    </center>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ed7edc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        
+        input[type=submit] {
+          background-color: #4a484a;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #ed7edc;
+        }
+        
+        .container {
+          border-radius: 5px;
+          background-color: #6b6a9c;
+          padding: 20px;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <h3>Contact Form</h3>
+        
+        <div class="container">
+          <form action="/home">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="email">Your email</label>
+            <input type="text" id="email" name="email" placeholder="Your email...">
+
+            <label for="pnum">Your Phone Number</label>
+            <input type="text" id="pnum" name="pnum" placeholder="Your Phone Number...">
+        
+            <label for="country">Inquiry Purpose</label>
+            <select id="country" name="country">
+              <option value="australia">Job Opportunity</option>
+              <option value="canada">Volunteer Opportunity</option>
+              <option value="usa">Networking Opportunity</option>
+            </select>
+        
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write your message here" style="height:200px"></textarea>
+        
+            <a href="views\index.ejs">  
+              <input type="submit"/>  
+             </a>
+             <br>
+             <br>
+             <br>
+          </form>
+        </div>
+        
+        </body>
+    </div>
+  </main>
+
+<%- include partials/bottom_nav.ejs %>
+
+  
+<%- include partials/footer.ejs %>
